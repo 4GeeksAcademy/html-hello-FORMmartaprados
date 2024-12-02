@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra tu Unicornio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9ff3, #feca57, #ff6b6b, #48dbfb, #1dd1a1, #5f27cd);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        fieldset {
+            border: 2px solid #ff9ff3;
+            padding: 15px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .form-error {
+            background-color: #ffe6eb;
+            color: #e84118;
+            padding: 10px;
+            border: 1px solid #fab1a0;
+            border-radius: 5px;
+        }
+        .accepted-cards img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        .btn-primary {
+            background-color: #ff6b6b;
+            border-color: #ff6b6b;
+        }
+        .btn-primary:hover {
+            background-color: #ee5253;
+            border-color: #ee5253;
+        }
+        .btn-secondary {
+            background-color: #48dbfb;
+            border-color: #48dbfb;
+        }
+        .btn-secondary:hover {
+            background-color: #1dd1a1;
+            border-color: #1dd1a1;
+        }
+        h3 {
+            font-family: 'Fredoka One', cursive;
+            color: #5f27cd;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h3 class="mb-4 text-center">Compra tu Unicornio 🦄</h3>
+    <fieldset>
+        <div class="form-error mb-3">
+            Algunos campos están incompletos
+        </div>
+        <div class="row g-3 mb-3">
+            <div class="col-md-4">
+                <label for="cardNumber" class="form-label">Número de Tarjeta</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Introduce un número">
+            </div>
+            <div class="col-md-2">
+                <label for="cvc" class="form-label">CVC</label>
+                <input type="text" class="form-control" id="cvc" placeholder="Introduce un CVC">
+            </div>
+            <div class="col-md-4">
+                <label for="amount" class="form-label">Cantidad</label>
+                <div class="input-group">
+                    <span class="input-group-text">€</span>
+                    <input type="text" class="form-control" id="amount" placeholder="Introduce el monto">
+                </div>
+            </div>
+        </div>
+        <div class="row g-3 mb-3">
+            <div class="col-md-6">
+                <label for="firstName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Introduce tu nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="lastName" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Introduce tus apellidos">
+            </div>
+        </div>
+        <div class="row g-3 mb-3">
+            <div class="col-md-6">
+                <label for="city" class="form-label">Ciudad</label>
+                <select class="form-select" id="city">
+                    <option selected>Selecciona una ciudad</option>
+                    <option>Madrid</option>
+                    <option>Barcelona</option>
+                    <option>Valencia</option>
+                    <option>Sevilla</option>
+                    <option>Bilbao</option>
+                    <option>Málaga</option>
+                    <option>Zaragoza</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="postalCode" class="form-label">Código Postal</label>
+                <input type="text" class="form-control" id="postalCode" placeholder="Introduce el código postal">
+            </div>
+            <div class="col-md-3">
+                <label for="phone" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="phone" placeholder="Introduce tu teléfono">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Aceptamos:</label>
+            <div class="accepted-cards">
+                <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                <img src="https://img.icons8.com/color/48/amex.png" alt="American Express">
+                <img src="https://img.icons8.com/color/48/discover.png" alt="Discover">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" placeholder="Escribe cualquier nota aquí." rows="3"></textarea>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-secondary">Cancelar</button>
+            <button class="btn btn-primary">Comprar</button>
+        </div>
+    </fieldset>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
